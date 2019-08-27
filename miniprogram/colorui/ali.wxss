@@ -1,0 +1,20 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1341857_vkk5r8j16ri.eot?t=1565312279003'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1341857_vkk5r8j16ri.eot?t=1565312279003#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAN0AAsAAAAABzgAAAMnAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqCQII0ATYCJAMICwYABCAFhG0HMxtdBsgusG3YkwCAGpkbf1NALZ8FQATQWjp7t0/3JSBJiApJMQiT1rJDkkFhirouaSfXNB0QZr4sh6wQHvJUyF+awhyBMADoAEjITbhJcsuteP5ysExO3Pf/OWa6FM/vC5eMpKS9AY4HsgFFNdWd8B3IAfgNYzdRHsR+AjJdaGkmT62uAwEiMCwg7N4hMiAg5RJFLVoU5EvmRuEqyCkm57y+4Qr//fDHiFAkkUuBvPlbS3iQ/2cbjEtP/Z+ymiIAezwDtEWkGASIhMWlprm8w9Ag3jIn5KMHsK7swJ9t//9TjbDWf56QBzIbgU4i65zYmHOqlAmINGc34Fqvc0mndfM9eiecblixMhH7sHt2fqNnM7hcWbk4nN6KyYDq6qXlC9txQVlNzTLldLGTJlTNuHV/eiquOmuS0DqmdVXVEknftqUrKVgit/tYM1L8eNu2bU63AcrbtwkdPafV+VaLG+vm3mS1N59f0LGiWh6pyJ6WktekeafmTca0PPv8YCx0bII/NqCL9IxojJg5rnjz5vl6k9Izxvvcu/M8OHNf37vzPNYfn4cksdGzv0shndLD7/XZvdu1MMPSPb6zirN2dFZpXq2b0PS0LyRJLsYktEgmd89o1q3b/Hyfbv8eva7ZdPL623gA/1+lkmT8f/gbj8Rt6Awf/bdYjqBuz/c23PH/VdTOAhTP1hx46+yWVdHlAnUSbXZpLLGb990UZDL8J9ta+Owra32LsaCo9Y1aCjrHkCrqhYzYQZBTNgryisZBZqCyxWUtEd5CLGGAQQGCZvYh0cRLSDXzjozYD8hp4wvymoUUMktDyzXL+oQd2aQ9iKGIh2w3lDlsF5CWBgXZNUh0WhmS5HJcAyIO2QtNQ4Zlo2XIjsgYExwu0UypAAWCbbBUOAxZrRiqBCuIo3qJUjXTMHRr2ZP0HLaBIJMQCINCeBCrGyTjYHYCrU8F5X6+BiJysmKQmooObQOEcJBbh0z0jC2QZSJ7q4precTBRWRGUQJIQGA2UKnQC7GywiC1vJcC4VB6Uo+AKpMB1hLaivTzS2xPtwEyQJ4EOCVVOryDlRmsMnYAAAA=') format('woff2'),
+  url('//at.alicdn.com/t/font_1341857_vkk5r8j16ri.woff?t=1565312279003') format('woff'),
+  url('//at.alicdn.com/t/font_1341857_vkk5r8j16ri.ttf?t=1565312279003') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1341857_vkk5r8j16ri.svg?t=1565312279003#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yibiaopan:before {
+  content: "\eb67";
+}

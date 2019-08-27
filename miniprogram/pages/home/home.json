@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+     "cu-custom": "/colorui/components/cu-custom",
+     "index":"../index/index",
+     "mine":"../component/mine/mine"
+  }
+}

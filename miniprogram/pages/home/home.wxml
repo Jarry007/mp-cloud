@@ -1,0 +1,35 @@
+<cu-custom bgColor="bg-gradual-purple" ><view slot="content">云开发</view></cu-custom>
+<view >
+<index wx:if="{{curPage == 'index'}}"></index>
+<room wx:if="{{curPage == 'room'}}"></room>
+<mine wx:if="{{curPage == 'mine'}}"></mine>
+<order wx:if="{{curPage == 'order'}}"></order>
+<handle wx:if="{{curPage == 'handle' }}"></handle>
+<view class="cu-bar tabbar  bg-white foot">
+   <view class="action text-{{curPage == 'index'?'green':'gray'}}" bindtap="NavChange" data-name="index">
+      <view class="cuIcon-homefill"></view> 首页
+   </view>
+   <view class="action text-{{curPage == 'room'?'green':'gray'}} " bindtap="NavChange" data-name="room">
+      <view class="cuIcon-apps">
+      </view>
+    
+      房控
+   </view>
+   
+   <view class="action text-{{curPage == 'order'?'green':'gray'}} add-action" bindtap="NavChange" data-name="order">
+       <button class="cu-btn cuIcon-vip bg-green shadow"></button>
+      预约
+   </view>
+   
+   <view class="action text-{{curPage == 'handle'?'green':'gray'}}" bindtap="NavChange" data-name="handle">
+      <view class="cuIcon-upstage">
+      </view>
+      接口
+   </view>
+   <view class="action text-{{curPage == 'mine'?'green':'gray'}}" bindtap="NavChange" data-name="mine">
+      <view class="cuIcon-my">
+      </view>
+      我的
+   </view>
+</view>
+</view>

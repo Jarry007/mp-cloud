@@ -1,0 +1,5 @@
+<!--pages/getUser/getUser.wxml-->
+<cu-custom bgColor="bg-gradual-glod" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">获取</view></cu-custom>
+<button bindtap="getId">获取</button>
+<button bindtap="queryAll">查询所有</button>
+<button bindtap="queryUser">查询自己</button>

@@ -1,0 +1,14 @@
+/* pages/component/mine/mine.wxss */
+.mineBg{
+   background-image: url('https://6961-iam-nzqfn-1300088664.tcb.qcloud.la/ddd/1566885817202_56.png?sign=377b57ef6a5d2f098d1e015aaade5536&t=1566885867');
+   background-repeat: no-repeat;
+   background-size: 100% ;
+   width: 100%;
+   height: 50vh;
+}
+.open-avatar{
+   border-radius: 10rpx;
+   overflow: hidden;
+   width: 120rpx;
+   height: 120rpx;
+}

@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-purple" ><view slot="content">登 录</view></cu-custom>
+
+<view class="margin-xl padding-lg bg-white radius shadow-lg">
+    <view class="flex justify-center">
+            <view class='text-center'>
+                <image class="cu-avatar xl round solids" src='https://6961-iam-nzqfn-1300088664.tcb.qcloud.la/ddd/1566885817202_56.png?sign=377b57ef6a5d2f098d1e015aaade5536&t=1566885867'></image>
+            </view>
+    </view>
+</view>
+<view class='padding-lg'>
+<button class='cu-btn bg-mauve lg padding flex flex-direction' bindtap="userLogin">
+  登录
+</button>
+</view>
