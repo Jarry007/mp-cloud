@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-
+<image src="data:image/png;base64,{{imgUrl}}"/>
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 
@@ -42,9 +42,8 @@
 
   <!-- 云调用 -->
   <view class="uploader">
-    <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
-      <text>云调用</text>
-    </navigator>
+   <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
   </view>
 
 <view class="uploader">

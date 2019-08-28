@@ -1,0 +1,6 @@
+/* pages/component/poster/poster.wxss */
+.poster{
+   border: 1px solid #ddd;
+   margin: 0 auto;
+   
+}

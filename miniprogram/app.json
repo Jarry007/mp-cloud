@@ -1,7 +1,9 @@
 {
    "pages": [
-      "pages/sigle/login/login",
       "pages/home/home",
+      "pages/sigle/login/login",
+      "pages/component/poster/poster",
+      
       "pages/index/index",
       "pages/userConsole/userConsole",
       "pages/storageConsole/storageConsole",

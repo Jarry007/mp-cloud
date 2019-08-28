@@ -7,7 +7,9 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+     imgUrl:''
   },
 
   onLoad: function() {
@@ -17,7 +19,7 @@ Page({
       })
       return
     }
-
+   
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -25,10 +27,11 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
+            //   this.setData({
+            //     avatarUrl: res.userInfo.avatarUrl,
+            //     userInfo: res.userInfo
+            //   })
+            
             }
           })
         }
@@ -61,7 +64,74 @@ Page({
          }
       })
    },
-   
+   bindGetUserInfo(e) {
+      wx.cloud.callFunction({
+         name:'getCode',
+         data:{
+            path: 'pages/home/home',
+            line_color:{"r":"142","g":"86","b":"220"}
+         },
+         success:res=>{
+            let imgUrl = wx.arrayBufferToBase64(res.result.buffer)
+            this.setData({
+               imgUrl: imgUrl
+            })
+            // 上传图片
+            const cloudPath =  'dddds/'+new Date().valueOf() + '_' + Math.floor(Math.random() * 100) + '.png'
+            console.log(cloudPath)
+            wx.cloud.callFunction({
+               name:'uploadBase',
+               data:{
+                  path:cloudPath,
+                  file:imgUrl
+               },
+               success:res=>{
+                  console.log('success',res)
+               },
+               fail:err=>{
+                  console.log(err)
+               }
+            })
+         }
+      })
+//       const APPID = 'wxffsdnfeoifh12jg515',
+//          APPSECRET = '4848hjbvtyted47af4386tg'
+//       let url = `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${APPID}&secret=${APPSECRET}`
+
+// let that = this
+//       wx.request({
+//          url: url,
+//          method:'GET',
+//          success:res=>{
+//             console.log('res',res.data.access_token)
+//             let token = res.data.access_token
+//             let data_ = {
+              
+//                path: 'pages/home/home'
+//             }
+//             wx.request({
+//                url: `https://api.weixin.qq.com/wxa/getwxacode?access_token=${token}`,
+//                method:'POST',
+//                responseType:'arraybuffer',
+//                header: {
+//                   'content-type': 'application/x-www-form-urlencoded'
+//                },
+//                data:JSON.stringify(data_),
+//                success:e=>{
+                  
+//                   let imgUrl = wx.arrayBufferToBase64(e.data);
+                
+//                   that.setData({
+//                      imgUrl: imgUrl
+//                   })
+//                }
+//             })
+//          }
+//       })
+//       console.log(e.detail.userInfo)
+      app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
+      app.globalData.userInfo = e.detail.userInfo
+   },
   onGetOpenid: function() {
     // 调用云函数
     wx.cloud.callFunction({

@@ -1,0 +1,3 @@
+
+<canvas canvas-id="poster" class="poster" style="width:{{cWidth}}px;height:{{cHeight}}px"></canvas>
+<button bindtap="addHeader">添加头像</button>

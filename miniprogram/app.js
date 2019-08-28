@@ -8,7 +8,7 @@ App({
            this.globalData.barInfo.Custom = custom;
            this.globalData.barInfo.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
            if(this.sysCallBack){
-              this.sysCallBack(e)
+              this.sysCallBack(e,custom)
            }
         }
      })

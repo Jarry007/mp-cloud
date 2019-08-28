@@ -32,7 +32,7 @@ Component({
    * 组件的初始数据
    */
   attached(){
-     if (app.globalData.barInfo.StatusBar){
+     if (app.globalData.barInfo.Custom){
         this.setData({
            StatusBar: app.globalData.barInfo.StatusBar,
            CustomBar: app.globalData.barInfo.CustomBar,
@@ -40,8 +40,7 @@ Component({
         })
      }else{
         console.log('callbackkkkkk')
-        app.sysCallBack=e=>{
-           let custom = wx.getMenuButtonBoundingClientRect();
+        app.sysCallBack = (e, custom)=>{
            this.setData({
               StatusBar: e.statusBarHeight,
               CustomBar: custom.bottom + custom.top - e.statusBarHeight,

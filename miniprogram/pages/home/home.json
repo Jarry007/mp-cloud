@@ -2,6 +2,7 @@
   "usingComponents": {
      "cu-custom": "/colorui/components/cu-custom",
      "index":"../index/index",
-     "mine":"../component/mine/mine"
+     "mine":"../component/mine/mine",
+     "poster":"../component/poster/poster"
   }
 }

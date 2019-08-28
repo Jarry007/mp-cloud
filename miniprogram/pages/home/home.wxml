@@ -1,7 +1,7 @@
 <cu-custom bgColor="bg-gradual-purple" ><view slot="content">云开发</view></cu-custom>
 <view >
 <index wx:if="{{curPage == 'index'}}"></index>
-<room wx:if="{{curPage == 'room'}}"></room>
+<poster wx:if="{{curPage == 'poster'}}"></poster>
 <mine wx:if="{{curPage == 'mine'}}"></mine>
 <order wx:if="{{curPage == 'order'}}"></order>
 <handle wx:if="{{curPage == 'handle' }}"></handle>
@@ -9,11 +9,11 @@
    <view class="action text-{{curPage == 'index'?'green':'gray'}}" bindtap="NavChange" data-name="index">
       <view class="cuIcon-homefill"></view> 首页
    </view>
-   <view class="action text-{{curPage == 'room'?'green':'gray'}} " bindtap="NavChange" data-name="room">
+   <view class="action text-{{curPage == 'poster'?'green':'gray'}} " bindtap="NavChange" data-name="poster">
       <view class="cuIcon-apps">
       </view>
     
-      房控
+      海报
    </view>
    
    <view class="action text-{{curPage == 'order'?'green':'gray'}} add-action" bindtap="NavChange" data-name="order">
