@@ -3,7 +3,7 @@
 <index wx:if="{{curPage == 'index'}}"></index>
 <poster wx:if="{{curPage == 'poster'}}"></poster>
 <mine wx:if="{{curPage == 'mine'}}"></mine>
-<order wx:if="{{curPage == 'order'}}"></order>
+<calendar wx:if="{{curPage == 'calendar'}}"></calendar>
 <handle wx:if="{{curPage == 'handle' }}"></handle>
 <view class="cu-bar tabbar  bg-white foot">
    <view class="action text-{{curPage == 'index'?'green':'gray'}}" bindtap="NavChange" data-name="index">
@@ -16,8 +16,8 @@
       海报
    </view>
    
-   <view class="action text-{{curPage == 'order'?'green':'gray'}} add-action" bindtap="NavChange" data-name="order">
-       <button class="cu-btn cuIcon-vip bg-green shadow"></button>
+   <view class="action text-{{curPage == 'calendar'?'green':'gray'}} add-action" bindtap="NavChange" data-name="calendar">
+       <button class="cu-btn cuIcon-add bg-green shadow"></button>
       预约
    </view>
    

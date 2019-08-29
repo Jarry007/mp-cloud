@@ -1,6 +1,10 @@
 /* pages/component/poster/poster.wxss */
 .poster{
-   border: 1px solid #ddd;
    margin: 0 auto;
+   transition: all .3s ease-in;
+}
+
+.hidden{
+   transform: translateY(200%);
    
 }

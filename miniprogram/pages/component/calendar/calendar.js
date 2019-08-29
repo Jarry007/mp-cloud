@@ -1,17 +1,11 @@
-// pages/home/home.js
+// pages/component/calendar/calendar.js
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      curPage: 'calendar'
-   },
-   NavChange(e){
-      wx.vibrateShort()
-      this.setData({
-         curPage: e.currentTarget.dataset.name
-      })
+
    },
 
    /**
@@ -21,11 +15,16 @@ Page({
 
    },
 
-  
+   /**
+    * 生命周期函数--监听页面初次渲染完成
+    */
    onReady: function () {
 
    },
 
+   /**
+    * 生命周期函数--监听页面显示
+    */
    onShow: function () {
 
    },

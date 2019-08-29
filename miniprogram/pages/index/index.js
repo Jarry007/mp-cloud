@@ -68,8 +68,8 @@ Page({
       wx.cloud.callFunction({
          name:'getCode',
          data:{
-            path: 'pages/home/home',
-            line_color:{"r":"142","g":"86","b":"220"}
+            path: 'pages/home/home'
+            // line_color:{"r":"142","g":"86","b":"220"}
          },
          success:res=>{
             let imgUrl = wx.arrayBufferToBase64(res.result.buffer)
@@ -87,6 +87,8 @@ Page({
                },
                success:res=>{
                   console.log('success',res)
+                  app.globalData.erCode = res.result.fileID
+                  wx.setStorageSync('erCode', res.result.fileID)
                },
                fail:err=>{
                   console.log(err)
@@ -131,6 +133,7 @@ Page({
 //       console.log(e.detail.userInfo)
       app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
       app.globalData.userInfo = e.detail.userInfo
+      wx.setStorageSync('userinfo', e.detail.userInfo)
    },
   onGetOpenid: function() {
     // 调用云函数

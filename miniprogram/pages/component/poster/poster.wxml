@@ -1,3 +1,25 @@
 
-<canvas canvas-id="poster" class="poster" style="width:{{cWidth}}px;height:{{cHeight}}px"></canvas>
-<button bindtap="addHeader">添加头像</button>
+
+<button class="cu-btn bg-green shadow" bindtap="addHeader">添加头像</button>
+
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 图片窗口
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Image">Image</button>
+  </view>
+</view>
+
+<view class="cu-modal {{show?'show':''}}">
+  <view class="cu-dialog" style="width:{{cWidth}}px">
+  
+      <canvas canvas-id="poster" class="{{show?'poster':'hidden'}}" style="width:{{cWidth}}px;height:{{cHeight}}px"></canvas>
+
+    <view class="cu-bar bg-white">
+     <view class="action  flex-sub text-green " bindtap="exportImg">
+       保存图片</view>
+      <view class="action flex-sub text-green solid-left" bindtap="hideModal">取消操作</view>
+    </view>
+  </view>
+</view>

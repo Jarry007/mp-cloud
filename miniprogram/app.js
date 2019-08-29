@@ -1,17 +1,23 @@
 //app.js
 App({
   onLaunch: function () {
-     wx.getSystemInfo({
-        success: e => {
-           this.globalData.barInfo.StatusBar = e.statusBarHeight;
-           let custom = wx.getMenuButtonBoundingClientRect();
-           this.globalData.barInfo.Custom = custom;
-           this.globalData.barInfo.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
-           if(this.sysCallBack){
-              this.sysCallBack(e,custom)
-           }
-        }
-     })
+   //   wx.getSystemInfo({
+        
+   //      success: e => {
+   //         let custom = wx.getMenuButtonBoundingClientRect();
+   //       //   setTimeout(()=>{
+   //       //      this.globalData.barInfo.StatusBar = e.statusBarHeight;
+             
+   //       //      this.globalData.barInfo.Custom = custom;
+   //       //      this.globalData.barInfo.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+   //       //   },4000)
+          
+   //         if(this.sysCallBack){
+   //            console.log('call',e,custom)
+   //            this.sysCallBack(e)
+   //         }
+   //      }
+   //   })
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {

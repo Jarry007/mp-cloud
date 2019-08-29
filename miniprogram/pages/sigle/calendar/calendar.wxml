@@ -1,0 +1,40 @@
+<cu-custom bgColor="bg-gradual-black" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">日期时间选择</view></cu-custom>
+
+
+<view class="titleDate">
+   <button class="cu-btn  " bindtap="lastMonth">
+      <text class="cuIcon-back"></text>
+   </button>
+   {{currentYear}} - {{currentMonth+1}}
+   <button class="cu-btn  " bindtap="nextMonth">
+      <text class="cuIcon-right"></text>
+   </button>
+
+</view>
+
+<view class="title">
+   <view wx:for='{{weeks}}' wx:key='index'>{{item}}</view>
+</view>
+<view class="calender  {{anmation? 'animation-slide-skew':''}}">
+   <view wx:for='{{monthNum+week}}'  class="cal-body {{index-week+1==currentDay&&nowMonth==currentMonth&&nowYear==currentYear?'now':''}}" wx:key='index' data-day="{{index-week+1}}" bindtap="choseDay">
+      <view class="{{index-week+1>0?'cal-text ':''}} {{choseDay==index-week+1&&currentMonth==choseMonth?'chose':''}}" >{{index-week+1 >0?index-week+1:''}}</view>
+   </view>
+</view>
+<view>
+</view>
+<picker-view wx:if='{{datePick}}' class="picker" mask-class='mask' indicator-class='indicator'  bindchange="bindChange">
+   <picker-view-column class='column'>
+      <view wx:for='{{24}}' style="line-height:50rpx;" wx:key='index'>{{index
+         <10? '0'+index:index}}</view>
+   </picker-view-column>
+   <picker-view-column class='column'>
+      <view wx:for='{{60}}' style="line-height:50rpx;" wx:key='imdex'>{{index
+         <10? '0'+index:index}}</view>
+   </picker-view-column>
+</picker-view>
+
+<view>您选择的是：{{choseDate}}  {{choseHours}} : {{choseMin}}</view>
+
+<view>
+   <button class="toToday" bindtap="initDay">今</button>
+</view>

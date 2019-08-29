@@ -32,27 +32,49 @@ Component({
    * 组件的初始数据
    */
   attached(){
-     if (app.globalData.barInfo.Custom){
-        this.setData({
-           StatusBar: app.globalData.barInfo.StatusBar,
-           CustomBar: app.globalData.barInfo.CustomBar,
-           Custom: app.globalData.barInfo.Custom
-        })
-     }else{
-        console.log('callbackkkkkk')
-        app.sysCallBack = (e, custom)=>{
-           this.setData({
-              StatusBar: e.statusBarHeight,
-              CustomBar: custom.bottom + custom.top - e.statusBarHeight,
-              Custom: custom
-           })
+   //   console.log(app.sysCallBack)
+   //   if (app.globalData.barInfo.Custom){
+   //      this.setData({
+   //         StatusBar: app.globalData.barInfo.StatusBar,
+   //         CustomBar: app.globalData.barInfo.CustomBar,
+   //         Custom: app.globalData.barInfo.Custom
+   //      })
+   //   }else{
+   //      console.log('callbackkkkkk')
+   //      app.sysCallBack = e=>{
+   //         console.log('e',e)
+   //         this.setData({
+   //            StatusBar: e.statusBarHeight,
+   //            CustomBar: custom.bottom + custom.top - e.statusBarHeight,
+   //            Custom: custom
+   //         })
+   //      }
+   //   }
+
+     wx.getSystemInfo({
+
+        success: e => {
+           let custom = wx.getMenuButtonBoundingClientRect();
+            
+               //  this.globalData.barInfo.StatusBar = e.statusBarHeight;
+
+               //  this.globalData.barInfo.Custom = custom;
+               //  this.globalData.barInfo.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+            
+
+             this.setData({
+                StatusBar: e.statusBarHeight,
+                Custom:custom,
+                CustomBar: custom.bottom + custom.top - e.statusBarHeight
+             })
+
         }
-     }
+     })
   },
   data: {
-    StatusBar: app.globalData.barInfo.StatusBar,
-     CustomBar: app.globalData.barInfo.CustomBar,
-     Custom: app.globalData.barInfo.Custom
+    StatusBar: '',
+     CustomBar: '',
+     Custom: ''
   },
   /**
    * 组件的方法列表

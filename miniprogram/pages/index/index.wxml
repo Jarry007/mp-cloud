@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<scroll-view scroll-y class="container" style="height:100vh">
 <image src="data:image/png;base64,{{imgUrl}}"/>
   <!-- 用户 openid -->
   <view class="userinfo">
@@ -57,4 +57,4 @@
       <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
   </view>
 
-</view>
+</scroll-view>

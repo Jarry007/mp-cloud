@@ -1,0 +1,5 @@
+<!--pages/component/calendar/calendar.wxml-->
+<text>pages/component/calendar/calendar.wxml</text>
+ <navigator url="/pages/sigle/calendar/calendar" open-type="navigate" class="uploader-text">
+      <text>选择日期时间</text>
+    </navigator>

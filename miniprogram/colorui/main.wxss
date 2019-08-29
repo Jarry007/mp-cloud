@@ -45,13 +45,13 @@ page {
 	--greyLight: #e7ebed;
 	/* 渐变色 */
    
-	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
 	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
 	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
 	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
 	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
 	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
    --gradualGlod:linear-gradient(147deg,#FFE53B 0%,#FF2525 74%);
+   --gradualBlack:linear-gradient(61deg,#734516 0%,#000000 100%);
 	/* 阴影透明色 */
 	--ShadowSize: 6rpx 6rpx 8rpx;
 	--redShadow: rgba(204, 69, 59, 0.2);
@@ -3662,7 +3662,10 @@ scroll-view.cu-steps .cu-item {
 	background-image: var(--gradualOrange);
 	color: var(--white);
 }
-
+.bg-gradual-black{
+   background-image: var(--gradualBlack);
+	color: var(--white);
+}
 .bg-gradual-green {
 	background-image: var(--gradualGreen);
 	color: var(--white);

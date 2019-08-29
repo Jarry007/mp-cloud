@@ -2,8 +2,9 @@
    "pages": [
       "pages/home/home",
       "pages/sigle/login/login",
+      "pages/sigle/calendar/calendar",
       "pages/component/poster/poster",
-      
+      "pages/component/calendar/calendar",
       "pages/index/index",
       "pages/userConsole/userConsole",
       "pages/storageConsole/storageConsole",
