@@ -2,7 +2,7 @@ const cloud = require('wx-server-sdk')
 const fs = require('fs')
 const path = require('path')
 cloud.init({
-   env: 'hotel-ryl3f'
+   env: 'jarry007-b8c893'
 })
 
 exports.main = async (event, context) => {

@@ -7,7 +7,28 @@ Page({
    data: {
 
    },
+   sendmsg(){
+      console.log('d')
+      wx.cloud.callFunction({
+         name:"sendMsg",
+         data:{},
+         success:res=>{
+            console.log('res',res)
+         }
+      })
+   },
 
+   submitTemplateMessageForm(e){
+      wx.cloud.callFunction({
+         name:'sendMsg',
+         data:{
+            formId: e.detail.formId,
+         },
+         success:res=>{
+            console.log('chengg',res)
+         }
+      })
+   },
    /**
     * 生命周期函数--监听页面加载
     */

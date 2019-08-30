@@ -1,3 +1,5 @@
+<cu-custom bgColor="bg-gradual-black" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">发送模板消息</view></cu-custom>
+
 <view class="container">
 
   

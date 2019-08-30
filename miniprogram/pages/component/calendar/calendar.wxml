@@ -3,3 +3,18 @@
  <navigator url="/pages/sigle/calendar/calendar" open-type="navigate" class="uploader-text">
       <text>选择日期时间</text>
     </navigator>
+
+    <button bindtap="sendmsg">发送模板消息</button>
+    <navigator url="/pages/openapi/serverapi/serverapi" open-type="navigate" class="uploader-text">
+      <text>选择日期时间</text>
+    </navigator>
+
+
+   <form class="list" bindsubmit="submitTemplateMessageForm" report-submit>
+    <button class="list-item" form-type="submit">
+      <text>发送模板消息</text>
+    </button>
+    <view class="list-item" wx:if="{{templateMessageResult}}">
+      <text class="request-text">调用结果：{{templateMessageResult}}</text>
+    </view>
+  </form>
