@@ -51,7 +51,7 @@ page {
 	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
 	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
    --gradualGlod:linear-gradient(147deg,#FFE53B 0%,#FF2525 74%);
-   --gradualBlack:linear-gradient(61deg,#734516 0%,#000000 100%);
+   --gradualBlack:linear-gradient(61deg, #3f2b96,#a8c0ff);
 	/* 阴影透明色 */
 	--ShadowSize: 6rpx 6rpx 8rpx;
 	--redShadow: rgba(204, 69, 59, 0.2);

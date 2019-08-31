@@ -1,16 +1,19 @@
 // pages/home/home.js
+const text = { 'calendar': '预约', 'index': "首页", 'poster': '海报', 'handle': '接口','mine':'我的'}
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-      curPage: 'calendar'
+      curPage: 'calendar',
+      title:'预约'
    },
    NavChange(e){
       wx.vibrateShort()
       this.setData({
-         curPage: e.currentTarget.dataset.name
+         curPage: e.currentTarget.dataset.name,
+         title: text[e.currentTarget.dataset.name]
       })
    },
 

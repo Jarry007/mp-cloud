@@ -1,4 +1,4 @@
-<cu-custom bgColor="bg-gradual-purple" ><view slot="content">云开发</view></cu-custom>
+<cu-custom bgColor="bg-gradual-purple" ><view slot="content"> 云开发 · {{title}}</view></cu-custom>
 <view >
 <index wx:if="{{curPage == 'index'}}"></index>
 <poster wx:if="{{curPage == 'poster'}}"></poster>
@@ -12,7 +12,6 @@
    <view class="action text-{{curPage == 'poster'?'green':'gray'}} " bindtap="NavChange" data-name="poster">
       <view class="cuIcon-apps">
       </view>
-    
       海报
    </view>
    

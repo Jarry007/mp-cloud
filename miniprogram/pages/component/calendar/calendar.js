@@ -14,10 +14,27 @@ Page({
          data:{},
          success:res=>{
             console.log('res',res)
+         },
+         fail:err=>{
+            console.log('err',err)
          }
       })
    },
-
+pay(){
+   wx.requestPayment({
+      timeStamp: '1567221067497',
+      nonceStr: 'dds',
+      package: 'dsds',
+      signType: 'MD5',
+      paySign: 'dsdss',
+      success:res=>{
+         console.log('res',res)
+      },
+      fail:err=>{
+         console.log('err',err)
+      }
+   })
+},
    submitTemplateMessageForm(e){
       wx.cloud.callFunction({
          name:'sendMsg',
@@ -26,6 +43,9 @@ Page({
          },
          success:res=>{
             console.log('chengg',res)
+         },
+         fail: err => {
+            console.log('err', err)
          }
       })
    },

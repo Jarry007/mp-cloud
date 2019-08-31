@@ -18,3 +18,4 @@
       <text class="request-text">调用结果：{{templateMessageResult}}</text>
     </view>
   </form>
+  <button bindtap="pay">支付</button>
