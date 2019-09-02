@@ -35,6 +35,37 @@ pay(){
       }
    })
 },
+   pays(e){
+      let money = e.detail.value.money
+      let orderid = new Date().valueOf() + '' + Math.floor(Math.random() * 100)
+      wx.cloud.callFunction({
+         name:'pays',
+         data:{
+            orderid:orderid,
+            money:money
+         },
+         success:res=>{
+            console.log('res',res)
+            this.payIt(res.result)
+         }
+      })
+   },
+   payIt(obj){
+      wx.requestPayment({
+         timeStamp: obj.timeStamp,
+         nonceStr: obj.nonceStr,
+         package: obj.package,
+         signType: obj.signType,
+         paySign: obj.paySign,
+         signType:obj.signType,
+         success:res=>{
+            wx.showToast({
+               title: '支付成功',
+               icon:'success'
+            })
+         }
+      })
+   },
    submitTemplateMessageForm(e){
       wx.cloud.callFunction({
          name:'sendMsg',
