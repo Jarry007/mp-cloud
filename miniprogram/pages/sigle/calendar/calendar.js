@@ -72,12 +72,15 @@ Page({
 
    },
    initDay() {
+       //获取当前选择的年月日
       let date = new Date()
       let currentYear = date.getFullYear(),
          currentMonth = date.getMonth(),
          currentDay = date.getDate()
-
+        
+      //获取当年，当月的天数 getDate()，此时month+1
       let monthNum = new Date(currentYear, currentMonth + 1, 0).getDate()
+      //获取该月1号是周几，注意此时month不加1
       let week = new Date(currentYear, currentMonth, 1).getDay()
       this.setData({
          currentYear: currentYear,
@@ -85,7 +88,7 @@ Page({
          currentDay: currentDay,
          monthNum: monthNum,
          week: week,
-         nowYear: currentYear,
+         nowYear: currentYear,  //这里的now代表今天对应的日期，存在data中，点击回到今天时再从data中取出
          nowMonth: currentMonth,
          nowDay: currentDay
       })
@@ -134,8 +137,11 @@ Page({
       this.setData({
          anmation:true
       })
+      //计算余数，除以12之后的余数便是要减的月份数
       let Remainder = this.data.currentMonth % 12;
       if (this.data.currentMonth < 1) {
+          //parseInt(this.data.currentMonth / 12) 计算整数，得到的值就是要减的年
+          //如果当前选择的月份是负数，需要减整数后再-1
          var currentYear = this.data.currentYear - 1 - parseInt(this.data.currentMonth / 12)
          var currentMonth = 12 - Math.abs(Remainder) - 1
       } else {
